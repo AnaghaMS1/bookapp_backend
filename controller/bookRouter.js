@@ -12,5 +12,11 @@ router.post("/add",async(req,res)=>{
     })
 })
 
+router.get("/viewall",async(req,res)=>{
+    let data=await bookModel.find()
+    res.json(data)
+    })
+
+
 
 module.exports=router
